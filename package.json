@@ -1,0 +1,22 @@
+{
+  "name": "pradeep-resume",
+  "version": "1.0.0",
+  "description": "pradeep-portfolio",
+  "license": "ISC",
+  "author": "pradeep kumar",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon index.js",
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "body-parser": "^2.2.0",
+    "dotenv": "^17.0.1",
+    "express": "^5.1.0",
+    "mongodb": "^6.17.0",
+    "mongoose": "^8.16.1",
+    "nodemailer": "^7.0.4",
+    "nodemon": "^3.1.10"
+  }
+}
