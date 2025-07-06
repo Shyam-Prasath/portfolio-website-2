@@ -30,8 +30,6 @@ app.post("/send-mail", async (req, res) => {
 
         await formData.save();
 
-        res.redirect("/?status=success");
-
         const transporter = nodemailer.createTransport({
             host: "smtp.gmail.com",
             port: 587,
@@ -77,15 +75,14 @@ app.post("/send-mail", async (req, res) => {
                     <div style="background-color: #f7f7f7; text-align: center; padding: 20px; color: #999; font-size: 13px;">
                     © ${new Date().getFullYear()} Virat Kohli Small Brother
                     </div>
-                </div>
-            `
-
-
+                </div>`,
         });
+        res.redirect("https://k-pradeep-kumar.vercel.app/?status=success");
 
     } catch (err) {
         console.error("Error saving form data:", err.message);
-        res.redirect("/?status=error");
+        res.redirect("https://k-pradeep-kumar.vercel.app/?status=error");
+
     }
 });
 
